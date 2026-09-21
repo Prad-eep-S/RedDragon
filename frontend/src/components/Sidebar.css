@@ -1,0 +1,130 @@
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+  position: fixed;
+
+  top: 105px;
+  left: 0;
+  bottom: 0;
+
+  width: 313px;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e5e5e5;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 900;
+}
+
+/* =====================================================
+   SIDEBAR MENU
+===================================================== */
+
+.sidebar-menu {
+  padding: 28px 15px;
+}
+
+/* =====================================================
+   SIDEBAR ITEM
+===================================================== */
+
+.sidebar-item {
+  width: 100%;
+  height: 62px;
+
+  border: none;
+  background: transparent;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 0 25px;
+
+  margin-bottom: 8px;
+
+  color: #333333;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.sidebar-item svg {
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.sidebar-item:hover {
+  background: #fff0f1;
+  color: #df101b;
+}
+
+/* =====================================================
+   ACTIVE
+===================================================== */
+
+.sidebar-item.active {
+  background: #e9151f;
+  color: #ffffff;
+}
+
+/* =====================================================
+   ACTIVE HOVER
+===================================================== */
+
+.sidebar-item.active:hover {
+  background: #e9151f;
+  color: #ffffff;
+}
+
+/* =====================================================
+   BOTTOM SECTION
+===================================================== */
+
+.sidebar-bottom {
+  margin-top: auto;
+
+  padding: 15px;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+/* =====================================================
+   BOTTOM ITEM
+===================================================== */
+
+.sidebar-bottom .sidebar-item {
+  margin-bottom: 0;
+}
+
+/* =====================================================
+   LOGOUT HOVER
+===================================================== */
+
+.sidebar-item.logout:hover {
+  background: #fff0f1;
+  color: #df101b;
+}

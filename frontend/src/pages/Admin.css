@@ -1,0 +1,234 @@
+/* =========================================================
+   ADMIN PAGE
+========================================================= */
+
+.admin-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f7f8fa;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.admin-eyebrow {
+  margin: 0 0 6px;
+  color: #e53935;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.admin-page-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1f1f1f;
+}
+
+.admin-page-description {
+  margin: 8px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+.admin-refresh-button {
+  border: none;
+  background: #e53935;
+  color: #ffffff;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.admin-refresh-button:hover {
+  background: #c62828;
+}
+
+.admin-refresh-button:active {
+  transform: scale(0.97);
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.admin-section {
+  margin-bottom: 34px;
+}
+
+.admin-section-header {
+  margin-bottom: 14px;
+}
+
+.admin-section-header h2 {
+  margin: 0;
+  color: #252525;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   CARD GRID
+========================================================= */
+
+.admin-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.admin-stat-card {
+  min-height: 125px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.admin-stat-label {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-stat-value {
+  margin-top: 12px;
+  color: #202020;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   ACTIVE / INACTIVE
+========================================================= */
+
+.admin-stat-card.active {
+  border-left: 4px solid #2e7d32;
+}
+
+.admin-stat-card.inactive {
+  border-left: 4px solid #e53935;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.admin-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+
+.admin-spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #e5e5e5;
+  border-top-color: #e53935;
+  border-radius: 50%;
+  animation: admin-spin 0.8s linear infinite;
+  margin-bottom: 14px;
+}
+
+@keyframes admin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-error {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.admin-error h2 {
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.admin-error p {
+  margin: 0 0 20px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.admin-retry-button {
+  border: none;
+  background: #e53935;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-retry-button:hover {
+  background: #c62828;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .admin-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-page {
+    padding: 20px;
+  }
+
+  .admin-page-header {
+    flex-direction: column;
+  }
+
+  .admin-page-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

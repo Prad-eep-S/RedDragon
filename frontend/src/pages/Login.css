@@ -1,0 +1,155 @@
+/* Login Page */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+}
+
+/* Login Card */
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 35px;
+  border: 1px solid #f0dada;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(180, 0, 0, 0.12);
+}
+
+/* Logo / Heading */
+
+.login-card h1 {
+  margin: 0;
+  text-align: center;
+  color: #d62828;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+
+.login-subtitle {
+  margin: 8px 0 28px;
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
+}
+
+/* Form Group */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* Labels */
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Input and Select */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Input / Select Focus */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #d62828;
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.12);
+}
+
+.login-error {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Login Button */
+
+.login-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #d62828;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+/* Button Hover */
+
+.login-button:hover {
+  background: #b71c1c;
+}
+
+/* Button Click */
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+/* Register Link */
+
+.register-link {
+  display: block;
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: #d62828;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-card h1 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,60 @@
+.restaurants-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.restaurants-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px 60px;
+}
+
+.restaurants-content h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #222222;
+}
+
+.restaurants-subtitle {
+  margin: 10px 0 35px;
+  color: #666666;
+  font-size: 16px;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.restaurants-status {
+  text-align: center;
+  margin-top: 50px;
+  color: #666666;
+}
+
+.restaurants-error {
+  color: #d90429;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .restaurants-content {
+    padding: 30px 20px 50px;
+  }
+
+  .restaurants-content h1 {
+    font-size: 26px;
+  }
+
+  .restaurants-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,748 @@
+/* =====================================================
+   PAGE
+===================================================== */
+
+.addresses-page {
+  min-height: 100vh;
+  background: #fff;
+  padding: 35px 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.addresses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.addresses-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.addresses-header p {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =====================================================
+   ADD BUTTON
+===================================================== */
+
+.add-address-btn {
+  border: none;
+  background: #e53935;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-address-btn span {
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.add-address-btn:hover {
+  background: #c62828;
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   SUCCESS / ERROR
+===================================================== */
+
+.success-message,
+.error-message {
+  padding: 13px 16px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.success-message {
+  background: #f1f8f1;
+  color: #237b35;
+  border: 1px solid #b9dfbd;
+}
+
+.error-message {
+  background: #fff2f2;
+  color: #c62828;
+  border: 1px solid #f0b7b7;
+}
+
+/* =====================================================
+   ADDRESS GRID
+===================================================== */
+
+.address-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+/* =====================================================
+   ADDRESS CARD
+===================================================== */
+
+.address-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+}
+
+.address-card:hover {
+  border-color: #e53935;
+  box-shadow: 0 5px 18px rgba(229, 57, 53, 0.12);
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.address-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.address-type {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #e53935;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.address-icon {
+  font-size: 21px;
+}
+
+/* =====================================================
+   ADDRESS CONTENT
+===================================================== */
+
+.address-content {
+  padding: 17px 0;
+}
+
+.address-line {
+  margin: 0 0 5px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.address-location {
+  margin: 8px 0 4px;
+  font-size: 14px;
+  color: #555;
+}
+
+.address-postal {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.address-landmark {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.address-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: white;
+  color: #e53935;
+  border: 1px solid #e53935;
+}
+
+.edit-btn:hover {
+  background: #e53935;
+  color: white;
+}
+
+.delete-btn {
+  background: white;
+  color: #777;
+  border: 1px solid #ddd;
+}
+
+.delete-btn:hover {
+  background: #fff1f1;
+  color: #c62828;
+  border-color: #e53935;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-address {
+  text-align: center;
+  padding: 80px 20px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+}
+
+.empty-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.empty-address h3 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.empty-address p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.empty-add-btn {
+  border: none;
+  background: #e53935;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-add-btn:hover {
+  background: #c62828;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.address-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  color: #777;
+}
+
+.spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #eee;
+  border-top: 4px solid #e53935;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 1000;
+
+  /*
+    Important:
+    allows the overlay itself to scroll on very small screens
+  */
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   ADDRESS MODAL
+===================================================== */
+
+.address-modal {
+  background: white;
+
+  width: 100%;
+  max-width: 550px;
+
+  /*
+    Important:
+    keep modal inside viewport
+  */
+  max-height: calc(100vh - 40px);
+
+  border-radius: 12px;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+
+  /*
+    Important:
+    make header + form behave as separate areas
+  */
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  /*
+    Prevent shrinking inside flex containers
+  */
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #eee;
+
+  /*
+    Keep header visible while form scrolls
+  */
+  flex-shrink: 0;
+
+  background: #fff;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.modal-header p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  color: #777;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  line-height: 1;
+
+  padding: 0;
+
+  flex-shrink: 0;
+}
+
+.close-btn:hover {
+  color: #e53935;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.address-form {
+  padding: 25px;
+
+  /*
+    THIS IS THE IMPORTANT PART
+    --------------------------------
+    The form becomes the scrollable area.
+  */
+  overflow-y: auto;
+
+  /*
+    Allows flex item to shrink properly
+  */
+  min-height: 0;
+
+  box-sizing: border-box;
+
+  flex: 1;
+}
+
+/* =====================================================
+   FORM SCROLLBAR
+===================================================== */
+
+.address-form::-webkit-scrollbar {
+  width: 7px;
+}
+
+.address-form::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.address-form::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 10px;
+}
+
+.address-form::-webkit-scrollbar-thumb:hover {
+  background: #a9a9a9;
+}
+
+/* Firefox */
+.address-form {
+  scrollbar-width: thin;
+  scrollbar-color: #c9c9c9 #f5f5f5;
+}
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 7px;
+}
+
+.form-group label span {
+  margin-left: 6px;
+  color: #999;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  background: white;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e53935;
+
+  box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.08);
+}
+
+/* =====================================================
+   FORM ROW
+===================================================== */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+/* =====================================================
+   MODAL BUTTONS
+===================================================== */
+
+.modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  /*
+    Keep buttons visible after scrolling
+  */
+  padding-bottom: 5px;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 11px 20px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cancel-btn {
+  border: 1px solid #ddd;
+
+  background: white;
+
+  color: #555;
+}
+
+.cancel-btn:hover {
+  background: #f7f7f7;
+}
+
+.save-btn {
+  border: none;
+
+  background: #e53935;
+
+  color: white;
+}
+
+.save-btn:hover {
+  background: #c62828;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   DELETE MODAL
+===================================================== */
+
+.delete-modal {
+  background: white;
+
+  width: 100%;
+
+  max-width: 390px;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.delete-icon {
+  font-size: 40px;
+
+  margin-bottom: 12px;
+}
+
+.delete-modal h3 {
+  margin: 0 0 8px;
+
+  font-size: 20px;
+}
+
+.delete-modal p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.delete-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.delete-actions button {
+  flex: 1;
+}
+
+.confirm-delete-btn {
+  border: none;
+
+  background: #e53935;
+
+  color: white;
+
+  padding: 11px;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.confirm-delete-btn:hover {
+  background: #c62828;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+  .addresses-page {
+    padding: 25px 18px;
+  }
+
+  .addresses-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .add-address-btn {
+    width: 100%;
+  }
+
+  .address-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  /* -----------------------------------------------
+     MOBILE MODAL
+  ----------------------------------------------- */
+
+  .modal-overlay {
+    align-items: flex-start;
+
+    padding: 12px;
+
+    overflow-y: auto;
+  }
+
+  .address-modal {
+    max-height: calc(100vh - 24px);
+
+    margin-top: 5px;
+
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    padding: 20px;
+  }
+
+  .address-form {
+    padding: 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   VERY SMALL SCREENS
+===================================================== */
+
+@media (max-height: 700px) {
+  .address-modal {
+    max-height: calc(100vh - 20px);
+  }
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .address-form {
+    padding: 18px 20px;
+  }
+}
